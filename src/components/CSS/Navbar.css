@@ -1,0 +1,132 @@
+/* Import the 'Lilita One' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Styling for the navbar section */
+.navbar {
+    /* Set the background image for the navbar */
+    background-image: url("../Image/nav.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    height: 35px;
+    /* Add a box shadow to the navbar */
+    box-shadow: 0 2px 30px rgb(145, 191, 4);
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 100; 
+    width: 100%; 
+}
+
+/* Styling for the content within the navbar */
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Styling for the navbar brand */
+.navbar-brand {
+    font-size: 35px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    /* Set the 'Lilita One' font for the navbar brand */
+    font-family: 'Lilita One', cursive;
+}
+
+/* Styling for the navbar icon */
+.navbar-icon {
+    width: 35px; 
+    height: 32px; 
+    margin-top: 5px;
+    margin-right: 8px; /* Add space between the icon and text */
+}
+
+/* Styling for the navbar links section */
+.navbar-links {
+    display: flex;
+    align-items: center; /* Vertically align the links to the center */
+}
+
+/* Styling for the buttons within the navbar links */
+.navbar-links button {
+    /* Apply a gradient background to the buttons */
+    background-image: linear-gradient(to right, #f3b9f6, #9757ff);
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 40px;
+    /* Add a transition for smooth hover effect */
+    transition: color 0.2s;
+    border-radius: 15px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    /* Set the 'Lilita One' font for the button text */
+    font-family: 'Lilita One', cursive;
+}
+
+/* Hover effect for the buttons within the navbar links */
+.navbar-links button:hover {
+    /* Enlarge the button on hover */
+    transform: scale(1.1);
+}
+
+/* Styling for the last link in the navbar links section */
+.navbar-links a:last-child {
+    /* Remove margin from the last link to the right */
+    margin-right: 0;
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media screen and (max-width: 768px) {
+
+    /* Adjust the navbar for the navbar links on smaller screens */
+    .navbar {
+        /* Set the background image for the navbar */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* Adjust the margin for the navbar links on smaller screens */
+    .navbar-links {
+        margin-top: 10px;
+    }
+
+    /* Adjust the margin for the individual links within the navbar on smaller screens */
+    .navbar-links button {
+        font-size: 15px;
+        height: 35px;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+}
+
+/* Responsive styles for screen width of 378px and below */
+@media screen and (max-width: 378px) {
+    /* Adjust the font size of the navbar brand on smaller screens */
+    .navbar-brand {
+        font-size: 15px;
+    }
+
+    /* Reduce the margin between the icon and text on smaller screens */
+    .navbar-icon {
+        margin-right: 5px;
+    }
+
+    /* Adjust the font size of the buttons within the navbar links on smaller screens */
+    .navbar-links button {
+        font-size: 15px;
+        height: 25px;
+    }
+}

@@ -1,0 +1,162 @@
+/* Import the 'Lilita One' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* bottob margon of main page */
+#albums{
+    margin-bottom: 100px;
+}
+
+/* Styling for each individual album item */
+.album-item {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    justify-content: space-between;
+    /* Set the background image for the album item */
+    background-image: url("../Image/albumcont.jpg");
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+/* Hover effect for the album item */
+.album-item:hover {
+    /* Add a box shadow when hovering over the album item */
+    box-shadow: 0 2px 30px rgb(145, 191, 4);
+}
+
+/* Styling for the album information section */
+.album-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the album label */
+.album-label {
+    font-size: 20px;
+    /* Set the 'Lilita One' font for the album label */
+    font-family: 'Lilita One', cursive;
+    color: #db7719;
+    margin-top: 0px;
+}
+
+/* Remove bottom border from the last album item */
+.album-item:last-child {
+    border-bottom: none;
+}
+
+/* Styling for the album title */
+.album-title {
+    flex: 1;
+    margin-right: 10px;
+    /* Set the 'Lilita One' font for the album title */
+    font-family: 'Lilita One', cursive;
+    font-size: 20px;
+    /* Capitalize the text of the album title */
+    text-transform: capitalize;
+    color: white;
+}
+
+/* Styling for the buttons within each album item */
+.album-buttons {
+    display: flex;
+    padding: 10px;
+}
+
+/* Styling for the buttons within each album item */
+.album-button {
+    border-radius: 15px;
+    /* Apply a gradient background to the buttons */
+    background-image: linear-gradient(to right, #f3b9f6, #9757ff);
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+/* Hover effect for the buttons */
+.album-button:hover {
+    /* Enlarge the button on hover */
+    transform: scale(1.1);
+}
+
+/* Styling for the album input field */
+.album-input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Slide-in animation */
+.slide-in-enter,
+.slide-in-appear {
+    transform: translateX(-100%);
+}
+
+.slide-in-enter-active,
+.slide-in-appear-active {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.slide-in-exit {
+    transform: translateX(0);
+}
+
+.slide-in-exit-active {
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Modify the styles for the album item on smaller screens */
+    .album-item {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        width: 200px;
+        height: 250px;
+    }
+
+    .album-input {
+        padding: 5px;
+        margin-right: 10px;
+        width: 50px;
+    }
+
+    /* Adjust the margin for the album buttons on smaller screens */
+    .album-buttons {
+        margin-top: 10px;
+    }
+
+    .album-button {
+        width: 60px;
+        height: 25px;
+        font-size: 10px;
+    }
+}
+
+/* Responsive styles for screen width of 378px and below */
+@media screen and (max-width: 378px) {
+
+    /* Adjust the padding for the album item on smaller screens */
+    .album-item {
+        padding: 8px;
+        width: 145px;
+        height: 150px;
+    }
+    .album-info {
+        font-size: 10px;
+    }
+    .album-title {
+        font-size: 12px;
+    }
+}

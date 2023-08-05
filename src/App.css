@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+/* Import the 'Lilita One' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Styling for the app container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px 0px;
+    /* Set the background image for the app container */
+    background-image: url("./components/Image/background.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 99; 
+    width: 100%; 
+    height: 100%; 
+    overflow-y: scroll; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling for the 'h1' element inside the '#albums' container */
+#albums h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Lilita One', cursive;
+    margin-top: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styling for the grid layout of the albums */
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Styling for the 'Add Album' section */
+.add-album {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-radius: 20px;
+    /* Set the background image for the 'Add Album' section */
+    background-image: url("./components/Image/albumcont.jpg");
 }
 
-.App-link {
-  color: #61dafb;
+/* Styling for the placeholder text inside the 'Add Album' input field */
+.add-album input[type="text"]::placeholder {
+    color: white;
+    font-size: 15px;
+    font-family: 'Lilita One', cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for the 'Add Album' input field */
+.add-album input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    color: white;
+    width: 300px;
+    background: #505805;
+    font-family: 'Lilita One', cursive;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* Styling for the 'Add Album' button */
+.add-album button {
+    background-image: linear-gradient(to right, #f3b9f6, #9757ff);
+    margin: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    font-family: 'Lilita One', cursive;
+}
+
+/* Styling for the 'Add Album' button on hover */
+.add-album button:hover {
+    transform: scale(1.1);
+}
+
+/* Styling for each individual album item */
+.album-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+/* Styling for the last album item to remove border */
+.album-item:last-child {
+    border: none;
+}
+
+/* Styling for the album title within each item */
+.album-title {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Styling for the buttons within each album item */
+.album-buttons {
+    display: flex;
+}
+
+/* Styling for the buttons within each album item */
+.album-button {
+    background-image: linear-gradient(to right, #f3b9f6, #9757ff);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-family: 'Lilita One', cursive;
+    font-size: 20px;
+}
+
+/* Styling for the album input field during editing */
+.album-input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 15px;
+    width: 300px;
+    color: white;
+    background: black;
+    border: none;
+    height: 25px;
+    font-size: 20px;
+}
+
+/* Fade out animation for the exiting element */
+.fade-out-exit {
+    opacity: 1;
+}
+
+.fade-out-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+/* Fade-in Animation for the entering element */
+.fade-in-enter {
+    opacity: 0;
+}
+
+.fade-in-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+/* Fade-out animation for the exiting element */
+.fade-in-exit {
+    opacity: 1;
+}
+
+.fade-in-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Modify grid layout to 3 columns for smaller screens */
+    .albums-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #albums h1 {
+        color: white;
+        font-family: 'Lilita One', cursive;
+    }
+
+    .album-button {
+        width: 60px;
+        height: 25px;
+        font-size: 13px;
+        padding: 2px;
+    }
+
+    .album-input {
+        width: 180px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    /* Modify grid layout to 2 columns for smaller screens */
+    .albums-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #albums h1 {
+        color: white;
+        font-size: 15px;
+        font-family: 'Lilita One', cursive;
+    }
+
+    .album-button {
+        width: 45px;
+        height: 25px;
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    .add-album {
+        width: 350px;
+        height: 60px;
+    }
+
+    .add-album input[type="text"]::placeholder {
+        font-size: 12px;
+    }
+
+    .album-input {
+        width: 130px;
+        margin-right: 5px;
+        font-size: 10px;
+    }
 }

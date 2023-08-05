@@ -1,0 +1,33 @@
+/* Import the 'Lilita One' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Styling for the footer section */
+.footer {
+    /* Set the background image for the footer */
+    background-image: url("../Image/nav.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    /* Add a box shadow to the footer */
+    box-shadow: 0 2px 30px rgb(145, 191, 4);
+    /* Set the 'Lilita One' font for the footer text */
+    font-family: 'Lilita One', cursive;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    position: fixed; /* Make the footer fixed at the bottom of the page */
+    bottom: 0; 
+    left: 0; 
+    z-index: 100; 
+    width: 100%; 
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust the padding for the footer on smaller screens */
+    .footer {
+        padding: 20px;
+    }
+}
