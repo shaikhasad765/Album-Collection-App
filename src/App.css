@@ -204,6 +204,10 @@
         font-family: 'Lilita One', cursive;
     }
 
+    #albums {
+        margin-right: 21px;
+    }
+
     .album-button {
         width: 45px;
         height: 25px;
@@ -214,6 +218,7 @@
     .add-album {
         width: 350px;
         height: 60px;
+        margin-right: 40px;
     }
 
     .add-album input[type="text"]::placeholder {
@@ -224,5 +229,9 @@
         width: 130px;
         margin-right: 5px;
         font-size: 10px;
+    }
+
+    .album-item{
+        width: 140px;
     }
 }
